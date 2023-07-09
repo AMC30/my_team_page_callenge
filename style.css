@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+#main-container {
+    margin: 20px;
+}
+
+#top {
+    font-size: 16px;
+}
+
+#top-left {
+    font-size: 1.4em;
+}
+
+#top-right {
+    font-size: 1.6em;
+}
+
+#img-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 700px;
+}
+
+.img1, .img2, .img3, .img4, .img5, .img6 {
+    display: flex;
+    margin: 20px;
+    width: 40%;
+    height: 25%;
+    position: relative;
+}
+
+.img1 img, .img2 img, .img3 img {
+    align-self: flex-start;
+    width: 80%;
+    height: 80%;
+}
+
+.img4 img, .img5 img, .img6 img {
+    align-self: flex-end;
+    width: 80%;
+    height: 80%;
+}
+
+.vertical {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+
+  }
+
+  .img1 .horizontal, .img2 .horizontal, .img3 .horizontal {
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .img4 .horizontal, .img5 .horizontal, .img6 .horizontal {
+    position: absolute;
+    bottom: -20%;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  @media (min-width: 780px) {
+
+    #main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #top {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #top-left {
+        font-size: 1.2em;
+        align-self: baseline;
+        margin-right: 30px;
+        margin-left: 150px;
+    }
+    
+    #top-right {
+        font-size: 1.4em;
+        margin-left: 100px;
+
+    }
+
+    #img-container {
+        width: 80%;
+        flex-direction: row;
+        align-self: center;
+        
+    }
+
+    .img1, .img2, .img3, .img4, .img5, .img6 {
+        margin: 5px;
+        width: 28%;
+        height: 45%;
+        align-self: center;
+    }
+
+    .img2 img, .img5 img {
+        align-self: flex-end;
+    }
+
+    .img4 img, .img6 img {
+        align-self: flex-start;
+    }
+
+    .img1 .horizontal, .img3 .horizontal, .img4 .horizontal, .img6 .horizontal {
+        bottom: 8%;
+      }
+
+      .img2 .horizontal, .img5 .horizontal {
+        bottom: -12%;
+      }
+
+    
+  }
